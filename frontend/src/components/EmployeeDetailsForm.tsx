@@ -39,7 +39,6 @@ const EmployeeDetailsForm = () => {
           setSubmitting(false)
           resetForm()
           alert("Employee details posted successfully!");
-
         })
         }
       >
