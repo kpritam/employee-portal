@@ -34,12 +34,15 @@ const EmployeeDetailsForm = () => {
       <h1 className="p-5 text-xl">Enter Employee Details</h1>
       <Formik
         initialValues={initialValues}
-        onSubmit={(values: Values, { setSubmitting, resetForm }: FormikHelpers<Values>) =>
+        onSubmit={(
+          values: Values,
+          { setSubmitting, resetForm }: FormikHelpers<Values>,
+        ) =>
           postEmployeeDetails(values).finally(() => {
-          setSubmitting(false)
-          resetForm()
-          alert("Employee details posted successfully!");
-        })
+            setSubmitting(false);
+            resetForm();
+            alert('Employee details posted successfully!');
+          })
         }
       >
         <Form>
@@ -72,6 +75,16 @@ const EmployeeDetailsForm = () => {
             className={inputStyle}
             placeholder="john@acme.com"
             type="email"
+          />
+
+          <label htmlFor="location" className={labelStyle}>
+            Location
+          </label>
+          <Field
+            id="location"
+            name="location"
+            className={inputStyle}
+            placeholder="Pune"
           />
 
           <button type="submit" className={`${buttonStyle} ml-5`}>

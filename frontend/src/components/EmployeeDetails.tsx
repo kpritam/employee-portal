@@ -10,6 +10,7 @@ type EmployeeDetails = {
   firstName: string;
   lastName: string;
   email: string;
+  location: string;
 };
 
 const tableStyle = 'p-3 border-separate border border-green-800';
@@ -29,6 +30,7 @@ const EmployeeDetails = (): JSX.Element => {
             <th className={tableStyle}>First Name</th>
             <th className={tableStyle}>Last Name</th>
             <th className={tableStyle}>Email</th>
+            <th className={tableStyle}>Location</th>
           </tr>
         </thead>
         <tbody>
@@ -37,6 +39,7 @@ const EmployeeDetails = (): JSX.Element => {
               <td className={tableStyle}>{employee.firstName}</td>
               <td className={tableStyle}>{employee.lastName}</td>
               <td className={tableStyle}>{employee.email}</td>
+              <td className={tableStyle}>{employee.location}</td>
             </tr>
           ))}
         </tbody>
